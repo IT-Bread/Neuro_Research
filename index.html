@@ -229,9 +229,8 @@
     .research-visual:hover img{transform:scale(1.025);filter:saturate(1.06) contrast(1.02)}
     .section-index{display:flex;align-items:center;gap:10px}
     .section-index::before{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
-    .reveal.visible{opacity:1;transform:none}
-    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}.card,.process-step,.detail-card,.application,.contact-shell,.research-visual,.research-visual img{transition:none}.scroll-progress{display:none}}
+    .reveal{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){.card,.process-step,.detail-card,.application,.contact-shell,.research-visual,.research-visual img{transition:none}.scroll-progress{display:none}}
 
     @media(max-width:900px){
       .wrap{width:min(var(--max),calc(100% - 32px))}
@@ -337,7 +336,7 @@
 
     <section id="research">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">01 / Research</div>
           <div>
             <h2>Научные направления</h2>
@@ -345,16 +344,16 @@
           </div>
         </div>
         <div class="grid3">
-          <article class="card reveal"><div class="num">01</div><h3>EEG &amp; biosignals</h3><p>Предобработка, анализ структуры сигнала, устойчивость к шумам, артефактам, выпадениям каналов и вариативности регистрации</p></article>
-          <article class="card reveal"><div class="num">02</div><h3>AI for neurodata</h3><p>Модели машинного обучения для нейрофизиологических временных рядов, интерпретируемый AI и оценка устойчивости алгоритмов</p></article>
-          <article class="card reveal"><div class="num">03</div><h3>Personalized neurotechnology</h3><p>Методы представления индивидуальных нейрофизиологических характеристик и их применения в системах регистрации, анализа и адаптации</p></article>
+          <article class="card"><div class="num">01</div><h3>EEG &amp; biosignals</h3><p>Предобработка, анализ структуры сигнала, устойчивость к шумам, артефактам, выпадениям каналов и вариативности регистрации</p></article>
+          <article class="card"><div class="num">02</div><h3>AI for neurodata</h3><p>Модели машинного обучения для нейрофизиологических временных рядов, интерпретируемый AI и оценка устойчивости алгоритмов</p></article>
+          <article class="card"><div class="num">03</div><h3>Personalized neurotechnology</h3><p>Методы представления индивидуальных нейрофизиологических характеристик и их применения в системах регистрации, анализа и адаптации</p></article>
         </div>
       </div>
     </section>
 
     <section id="technology">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">02 / Technology</div>
           <div>
             <h2>Межустройственное преобразование нейросигналов</h2>
@@ -362,7 +361,7 @@
           </div>
         </div>
 
-        <div class="signature reveal">
+        <div class="signature">
           <div class="signature-title">От аппаратно-зависимого сигнала — к сопоставимому представлению</div>
           <div>
             <p class="signature-copy"><strong>Разрабатываются собственные подходы</strong> к преобразованию и гармонизации нейросигналов между различными системами регистрации. Цель — сохранить информативные индивидуальные характеристики данных при смене оборудования, конфигурации каналов и условий измерения</p>
@@ -373,14 +372,14 @@
 
     <section id="expertise">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">03 / Expertise</div>
           <div>
             <h2>Исследования и прототипирование</h2>
             <p class="section-intro">От исследовательского вопроса — к вычислительному прототипу, проверке гипотезы и анализу устойчивости результата</p>
           </div>
         </div>
-        <div class="expertise reveal">
+        <div class="expertise">
           <div class="list">
             <div class="row"><span>01</span><div><strong>Signal processing</strong><br><small>ЭЭГ, временные ряды, фильтрация, признаки, гармонизация</small></div></div>
             <div class="row"><span>02</span><div><strong>Machine learning</strong><br><small>Классификация, представления, нейросетевые модели, XAI</small></div></div>
@@ -398,7 +397,7 @@
 
     <section id="approach">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">04 / Approach</div>
           <div>
             <h2>Исследовательский подход</h2>
@@ -406,18 +405,18 @@
           </div>
         </div>
 
-        <div class="process reveal">
-          <article class="process-step reveal"><div class="step">01 / Data</div><h3>Регистрация и качество</h3><p>Оценка структуры ЭЭГ, артефактов, пропусков каналов и различий между системами регистрации</p></article>
-          <article class="process-step reveal"><div class="step">02 / Representation</div><h3>Представление сигнала</h3><p>Формирование признаков и представлений, устойчивых к технической вариативности измерительных систем</p></article>
-          <article class="process-step reveal"><div class="step">03 / Modeling</div><h3>Моделирование</h3><p>Классические методы обработки сигналов, машинное обучение и нейросетевые подходы для временных рядов</p></article>
-          <article class="process-step reveal"><div class="step">04 / Validation</div><h3>Валидация</h3><p>Сравнение качества, устойчивости и интерпретируемости на различных сценариях регистрации и конфигурациях данных</p></article>
+        <div class="process">
+          <article class="process-step"><div class="step">01 / Data</div><h3>Регистрация и качество</h3><p>Оценка структуры ЭЭГ, артефактов, пропусков каналов и различий между системами регистрации</p></article>
+          <article class="process-step"><div class="step">02 / Representation</div><h3>Представление сигнала</h3><p>Формирование признаков и представлений, устойчивых к технической вариативности измерительных систем</p></article>
+          <article class="process-step"><div class="step">03 / Modeling</div><h3>Моделирование</h3><p>Классические методы обработки сигналов, машинное обучение и нейросетевые подходы для временных рядов</p></article>
+          <article class="process-step"><div class="step">04 / Validation</div><h3>Валидация</h3><p>Сравнение качества, устойчивости и интерпретируемости на различных сценариях регистрации и конфигурациях данных</p></article>
         </div>
       </div>
     </section>
 
     <section id="applications">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">05 / Applications</div>
           <div>
             <h2>Области применения</h2>
@@ -425,7 +424,7 @@
           </div>
         </div>
 
-        <div class="detail-grid reveal">
+        <div class="detail-grid">
           <div class="detail-card">
             <h3>Межустройственная сопоставимость</h3>
             <p>Методы для работы с нейроданными, полученными на различном оборудовании, при отличающихся конфигурациях электродов и параметрах регистрации</p>
@@ -446,7 +445,7 @@
           </div>
         </div>
 
-        <div class="applications reveal" style="margin-top:34px">
+        <div class="applications" style="margin-top:34px">
           <div class="application"><h3>Персонализированные нейротехнологии</h3><p>Учет индивидуальных особенностей нейрофизиологических данных при настройке методов анализа и взаимодействии с измерительными системами</p></div>
           <div class="application"><h3>Научное прототипирование</h3><p>Переход от исследовательской гипотезы к вычислительному прототипу, экспериментальной проверке и инженерной оценке применимости</p></div>
         </div>
@@ -455,14 +454,14 @@
 
     <section class="collab" id="contact">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div class="section-index">06 / Contact</div>
           <div>
             <h2>Научно-техническое сотрудничество</h2>
             <p class="section-intro">Открыта к исследовательским коллаборациям, индустриальным R&amp;D-задачам и совместной проверке новых методов на реальных нейрофизиологических данных</p>
           </div>
         </div>
-        <div class="contact-shell reveal">
+        <div class="contact-shell">
           <div class="contact-grid">
             <div>
               <div class="contact-badge">Research &amp; R&amp;D Collaboration</div>
@@ -496,28 +495,17 @@
   </footer>
 
   <script>
-    const progress = document.getElementById('scrollProgress')
-    const updateProgress = () => {
-      const h = document.documentElement.scrollHeight - innerHeight
-      progress.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + '%'
-    }
-    addEventListener('scroll', updateProgress, {passive:true})
-    updateProgress()
-
-    const items = document.querySelectorAll('.reveal')
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      }, {threshold:.10, rootMargin:'0px 0px -30px 0px'})
-      items.forEach(el => observer.observe(el))
-    } else {
-      items.forEach(el => el.classList.add('visible'))
-    }
+    (function () {
+      const progress = document.getElementById('scrollProgress')
+      if (!progress) return
+      const updateProgress = () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight
+        progress.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%'
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true })
+      window.addEventListener('resize', updateProgress)
+      updateProgress()
+    })()
   </script>
 </body>
 </html>
