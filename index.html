@@ -168,6 +168,26 @@
     .tech{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
     .tech span{padding:8px 11px;border-radius:999px;border:1px solid rgba(155,181,211,.12);background:rgba(255,255,255,.03);font-size:12px;color:#c2d3e7}
 
+    .detail-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+    .detail-card{
+      background:linear-gradient(180deg,rgba(16,28,45,.72),rgba(11,19,31,.76));
+      border:1px solid rgba(155,181,211,.12);border-radius:22px;padding:30px;box-shadow:var(--glow-soft)
+    }
+    .detail-card h3{font-family:var(--serif);font-size:27px;font-weight:400;margin-bottom:14px}
+    .detail-card p{margin:0;color:#adc0d9;font-size:15px}
+    .detail-list{margin:20px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .detail-list li{padding:14px 0;border-bottom:1px solid var(--line);color:#b9cade;font-size:14px}
+    .detail-list strong{color:#fff;font-weight:600}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+    .process-step{padding:24px;border:1px solid rgba(155,181,211,.12);border-radius:20px;background:rgba(255,255,255,.025);box-shadow:var(--glow-soft)}
+    .process-step .step{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7f96b2;margin-bottom:22px}
+    .process-step h3{font-family:var(--serif);font-size:22px;font-weight:400;margin-bottom:10px}
+    .process-step p{margin:0;color:#aebfd4;font-size:14px}
+    .applications{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .application{padding:24px 0;border-top:1px solid var(--line)}
+    .application h3{font-family:var(--serif);font-size:23px;font-weight:400;margin-bottom:8px}
+    .application p{margin:0;color:#aebfd4;font-size:15px;max-width:520px}
+
     .collab{padding-top:96px;padding-bottom:96px}
     .contact-shell{
       border-radius:28px;
@@ -199,9 +219,9 @@
       .wrap{width:min(var(--max),calc(100% - 32px))}
       .nav-links{display:none}
       .hero{padding:82px 0 60px}
-      .hero-grid,.section-head,.signature,.expertise,.contact-grid{grid-template-columns:1fr;gap:28px}
+      .hero-grid,.section-head,.signature,.expertise,.contact-grid,.detail-grid{grid-template-columns:1fr;gap:28px}
       .research-visual{min-height:420px}
-      .grid3{grid-template-columns:1fr}
+      .grid3,.process,.applications{grid-template-columns:1fr}
       .card{min-height:auto}
       section{padding:70px 0}
       .section-head{margin-bottom:28px}
@@ -261,6 +281,7 @@
         <a href="#research">Исследования</a>
         <a href="#technology">Технологии</a>
         <a href="#expertise">Компетенции</a>
+        <a href="#approach">Подход</a>
         <a href="#contact">Связь</a>
       </nav>
     </div>
@@ -301,7 +322,7 @@
           <div class="section-index">01 / Research</div>
           <div>
             <h2>Научные направления</h2>
-            <p class="section-intro">Работа на стыке нейрофизиологии, цифровой обработки сигналов и методов искусственного интеллекта — с ориентацией на воспроизводимые инженерные решения.</p>
+            <p class="section-intro">Нейрофизиология, цифровая обработка сигналов и методы искусственного интеллекта для анализа и интерпретации нейроданных.</p>
           </div>
         </div>
         <div class="grid3">
@@ -318,7 +339,7 @@
           <div class="section-index">02 / Technology</div>
           <div>
             <h2>Межустройственное преобразование нейросигналов</h2>
-            <p class="section-intro">Ключевое направление разработки — повышение сопоставимости нейрофизиологических данных, зарегистрированных устройствами с различными характеристиками и конфигурациями.</p>
+            <p class="section-intro">Методы повышения сопоставимости нейрофизиологических данных, зарегистрированных устройствами с различными характеристиками и конфигурациями.</p>
           </div>
         </div>
 
@@ -326,7 +347,6 @@
           <div class="signature-title">От аппаратно-зависимого сигнала — к сопоставимому представлению.</div>
           <div>
             <p class="signature-copy"><strong>Разрабатываются собственные подходы</strong> к преобразованию и гармонизации нейросигналов между различными системами регистрации. Цель — сохранить информативные индивидуальные характеристики данных при смене оборудования, конфигурации каналов и условий измерения.</p>
-            <p class="note">Публичная версия сайта описывает назначение технологии и исследовательскую область. Алгоритмические, математические и патентно-критичные детали намеренно не раскрываются.</p>
           </div>
         </div>
       </div>
@@ -338,7 +358,7 @@
           <div class="section-index">03 / Expertise</div>
           <div>
             <h2>Исследования и прототипирование</h2>
-            <p class="section-intro">Полный цикл от постановки исследовательской задачи до воспроизводимого вычислительного прототипа и анализа результатов.</p>
+            <p class="section-intro">Постановка исследовательских задач, вычислительное моделирование, валидация и прототипирование.</p>
           </div>
         </div>
         <div class="expertise">
@@ -348,7 +368,7 @@
             <div class="row"><span>03</span><div><strong>Research software</strong><br><small>Исследовательские пайплайны, валидация, визуализация, прототипы</small></div></div>
           </div>
           <div>
-            <p class="signature-copy">Интересуют научные и индустриальные задачи, где требуется связать <strong>нейрофизиологические данные, алгоритмы и реальную измерительную систему</strong>.</p>
+            <p class="signature-copy">Исследовательские задачи на стыке <strong>нейрофизиологических данных, алгоритмов и измерительных систем</strong>.</p>
             <div class="tech">
               <span>Python</span><span>PyTorch</span><span>NumPy / SciPy</span><span>EEG processing</span><span>Time Series</span><span>XAI</span><span>Topological Methods</span><span>Research Prototyping</span>
             </div>
@@ -357,10 +377,67 @@
       </div>
     </section>
 
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-index">04 / Approach</div>
+          <div>
+            <h2>Исследовательский подход</h2>
+            <p class="section-intro">Работа строится вокруг сопоставимости данных, устойчивости вычислительных методов и проверки того, какие свойства нейросигнала сохраняются при изменении условий регистрации.</p>
+          </div>
+        </div>
+
+        <div class="process">
+          <article class="process-step"><div class="step">01 / Data</div><h3>Регистрация и качество</h3><p>Оценка структуры ЭЭГ, артефактов, пропусков каналов и различий между системами регистрации.</p></article>
+          <article class="process-step"><div class="step">02 / Representation</div><h3>Представление сигнала</h3><p>Формирование признаков и представлений, устойчивых к технической вариативности измерительных систем.</p></article>
+          <article class="process-step"><div class="step">03 / Modeling</div><h3>Моделирование</h3><p>Классические методы обработки сигналов, машинное обучение и нейросетевые подходы для временных рядов.</p></article>
+          <article class="process-step"><div class="step">04 / Validation</div><h3>Валидация</h3><p>Сравнение качества, устойчивости и интерпретируемости на различных сценариях регистрации и конфигурациях данных.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-index">05 / Applications</div>
+          <div>
+            <h2>Области применения</h2>
+            <p class="section-intro">Исследовательские разработки ориентированы на задачи, где критичны воспроизводимость нейрофизиологических измерений, переносимость моделей и работа с неоднородными данными.</p>
+          </div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h3>Межустройственная сопоставимость</h3>
+            <p>Методы для работы с нейроданными, полученными на различном оборудовании, при отличающихся конфигурациях электродов и параметрах регистрации.</p>
+            <ul class="detail-list">
+              <li><strong>Cross-device EEG:</strong> сопоставление данных между системами регистрации.</li>
+              <li><strong>Signal harmonization:</strong> снижение влияния аппаратных различий на последующий анализ.</li>
+              <li><strong>Robust representations:</strong> устойчивые представления для аналитических и ML-пайплайнов.</li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h3>Интеллектуальный анализ нейроданных</h3>
+            <p>Исследование методов, которые позволяют работать с многомерными временными рядами и сохранять интерпретируемость результата.</p>
+            <ul class="detail-list">
+              <li><strong>EEG analytics:</strong> извлечение информативных характеристик и оценка динамики сигнала.</li>
+              <li><strong>AI / XAI:</strong> модели машинного обучения с анализом факторов, влияющих на решение.</li>
+              <li><strong>Research software:</strong> воспроизводимые вычислительные прототипы и визуализация результатов.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="applications" style="margin-top:34px">
+          <div class="application"><h3>Персонализированные нейротехнологии</h3><p>Учет индивидуальных особенностей нейрофизиологических данных при настройке методов анализа и взаимодействии с измерительными системами.</p></div>
+          <div class="application"><h3>Научное прототипирование</h3><p>Переход от исследовательской гипотезы к вычислительному прототипу, экспериментальной проверке и инженерной оценке применимости.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section class="collab" id="contact">
       <div class="wrap">
         <div class="section-head">
-          <div class="section-index">04 / Contact</div>
+          <div class="section-index">06 / Contact</div>
           <div>
             <h2>Научно-техническое сотрудничество</h2>
             <p class="section-intro">Исследовательские коллаборации, индустриальные R&amp;D-задачи, анализ нейрофизиологических данных, прототипирование и обсуждение совместных проектов.</p>
@@ -369,7 +446,7 @@
         <div class="contact-shell">
           <div class="contact-grid">
             <div>
-              <div class="contact-badge">Open to collaboration</div>
+              <div class="contact-badge">Research &amp; R&amp;D Collaboration</div>
               <h3 style="font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:16px">Алёна Андреева</h3>
               <p class="contact-text">Researcher &amp; Developer in Neurotechnology<br>EEG · Signal Processing · AI · Cross-device Neurodata</p>
               <div class="contact-actions">
@@ -378,18 +455,13 @@
               </div>
               <div class="qr-card">
                 <img src="data:image/png;base64,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" alt="QR-код контактной визитки Алёны Андреевой" />
-                <div><strong>Сохранить контакт</strong><p>QR-код содержит имя, email, телефон и Telegram. Удобно для быстрого обмена контактами на конференции.</p></div>
+                <div><strong>Контактный QR</strong></div>
               </div>
             </div>
             <div class="contact-card">
-              <!-- Замените значения ниже на свои реальные контакты перед публикацией -->
               <div class="contact-line"><div class="label">Email</div><div><a href="mailto:alena59117@gmail.com">alena59117@gmail.com</a></div></div>
               <div class="contact-line"><div class="label">Telegram</div><div><a href="https://t.me/IT_Bread">@IT_Bread</a></div></div>
               <div class="contact-line"><div class="label">Телефон</div><div><a href="tel:+79057183553">+7 905 718-35-53</a></div></div>
-              <div class="contact-line"><div class="label">ORCID</div><div><a href="YOUR_ORCID_URL">YOUR_ORCID</a></div></div>
-              <div class="contact-line"><div class="label">Research</div><div><a href="YOUR_RESEARCH_PROFILE_URL">ResearchGate / Scholar / LinkedIn</a></div></div>
-              <div class="contact-line"><div class="label">Location</div><div>YOUR_CITY / international collaboration</div></div>
-              <p class="privacy">Для связи по вопросам исследований, R&amp;D и научно-технического сотрудничества можно использовать email, Telegram или телефон.</p>
             </div>
           </div>
         </div>
