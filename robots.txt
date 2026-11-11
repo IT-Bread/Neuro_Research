@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://it-bread.github.io/Neuro_Research/sitemap.xml
